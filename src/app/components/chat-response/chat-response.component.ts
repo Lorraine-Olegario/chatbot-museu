@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Message } from 'src/app/types/message.type';
 
 @Component({
-  selector: 'app-chat-response',
-  templateUrl: './chat-response.component.html',
-  styleUrls: ['./chat-response.component.scss']
+    selector: 'chat-response',
+    templateUrl: './chat-response.component.html',
+    styleUrls: ['./chat-response.component.scss']
 })
+
 export class ChatResponseComponent implements OnInit {
 
-  constructor() { }
+    @Input() message!: Message;
 
-  ngOnInit(): void {
-  }
+    constructor() { }
 
+    ngOnInit(): void {
+    }
 }

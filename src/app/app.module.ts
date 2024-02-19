@@ -14,6 +14,7 @@ import { ChatResponseComponent } from './components/chat-response/chat-response.
 import { QuestionComponent } from './icons/question/question.component';
 import { CuriosityComponent } from './icons/curiosity/curiosity.component';
 import { HistoryComponent } from './icons/history/history.component';
+import { ChatDialogComponent } from './components/chat-dialog/chat-dialog.component';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { HistoryComponent } from './icons/history/history.component';
         ChatComponent,
         ChatSuggestionsComponent,
         ChatResponseComponent,
+        ChatDialogComponent,
     ],
     imports: [
         BrowserModule,

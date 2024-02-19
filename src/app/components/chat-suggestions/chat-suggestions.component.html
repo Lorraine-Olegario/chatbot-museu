@@ -11,7 +11,12 @@
 
         <div class="suggestions-list">
             <ul>
-                <li *ngFor="let question of suggestionsTopic.questions" >{{ question }}</li>
+                <li
+                    *ngFor="let question of suggestionsTopic.questions"
+                    (click)="selectQuestion(question)"
+                >
+                    {{ question }}
+                </li>
             </ul>
         </div>
     </div>

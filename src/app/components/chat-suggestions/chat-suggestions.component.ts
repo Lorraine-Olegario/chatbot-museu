@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
     selector: 'chat-suggestions',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ChatSuggestionsComponent implements OnInit {
+
+    @Output() questionSelected = new EventEmitter<string>();
 
     suggestionsTopics = [
         {
@@ -38,6 +40,10 @@ export class ChatSuggestionsComponent implements OnInit {
             ]
         }
     ];
+
+    selectQuestion(value: string){
+        this.questionSelected.emit(value);
+    }
 
     constructor() { }
 
