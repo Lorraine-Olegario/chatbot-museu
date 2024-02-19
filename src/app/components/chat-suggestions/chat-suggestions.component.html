@@ -1,0 +1,18 @@
+<div class="suggestions-wrapper">
+    <div class="suggestions-topic" *ngFor="let suggestionsTopic of suggestionsTopics">
+
+        <div class="suggestions-header">
+            <icon-question *ngIf="suggestionsTopic.icon === 'doubt'"></icon-question>
+            <icon-curiosity *ngIf="suggestionsTopic.icon === 'curiosity'"></icon-curiosity>
+            <icon-history *ngIf="suggestionsTopic.icon === 'history'"></icon-history>
+
+            <span>{{suggestionsTopic.title}}</span>
+        </div>
+
+        <div class="suggestions-list">
+            <ul>
+                <li *ngFor="let question of suggestionsTopic.questions" >{{ question }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
