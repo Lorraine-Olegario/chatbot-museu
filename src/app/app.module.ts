@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -15,6 +16,10 @@ import { QuestionComponent } from './icons/question/question.component';
 import { CuriosityComponent } from './icons/curiosity/curiosity.component';
 import { HistoryComponent } from './icons/history/history.component';
 import { ChatDialogComponent } from './components/chat-dialog/chat-dialog.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MessageService } from './services/message.service';
+import { QuestionInputComponent } from './components/question-input/question-input.component';
+import { SendComponent } from './icons/send/send.component';
 
 @NgModule({
     declarations: [
@@ -24,6 +29,7 @@ import { ChatDialogComponent } from './components/chat-dialog/chat-dialog.compon
         ChatSuggestionsComponent,
         ChatResponseComponent,
         ChatDialogComponent,
+        QuestionInputComponent,
     ],
     imports: [
         BrowserModule,
@@ -35,8 +41,13 @@ import { ChatDialogComponent } from './components/chat-dialog/chat-dialog.compon
         QuestionComponent,
         CuriosityComponent,
         HistoryComponent,
+        SendComponent,
+        FormsModule,
+        HttpClientModule,
     ],
-    providers: [],
+    providers: [
+        MessageService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

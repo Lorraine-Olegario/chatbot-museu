@@ -1,4 +1,4 @@
 export type Message = {
-    type: 'request' | 'repsonse',
+    type: 'request' | 'response',
     message: string
 }
